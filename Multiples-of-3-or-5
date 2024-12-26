@@ -1,0 +1,28 @@
+#include <iostream>
+
+int sumMultiples(int num) {
+    if (num < 0) {
+        return 0;
+    }
+
+    int sum = 0;
+
+    for (int i = 0; i < num; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+        }
+    }
+
+    return sum;
+}
+
+int main() {
+    int number;
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+
+    int result = sumMultiples(number);
+    std::cout << "The sum of multiples of 3 or 5 below " << number << " is: " << result << std::endl;
+
+    return 0;
+}
